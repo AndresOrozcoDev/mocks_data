@@ -4,7 +4,7 @@ const router = express.Router();
 const path = require('path');
 
 // Ruta al archivo JSON
-const jsonFilePath = path.join(__dirname, '../mocks/cities.json');
+const jsonFilePath = path.join(__dirname, '../../../mocks/cities.json');
 
 // Función para cargar el archivo JSON
 const loadStates = () => {
