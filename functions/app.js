@@ -30,7 +30,7 @@ app.get('/openapi.json', (req, res) => {
 });
 
 // Rutas principales
-app.use('/', citiesRoutes);
+app.use('/api', citiesRoutes);
 
 // Iniciamos el servidor
 // app.listen(PORT, () => {
