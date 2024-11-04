@@ -1,12 +1,11 @@
 const express = require('express');
 const cors = require('cors');
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocs = require('../swagger');
-const citiesRoutes = require('../routes/cities');
-const serverless = require('serverless-http');
+const swaggerDocs = require('./swagger');
+const citiesRoutes = require('./routes/cities');
 
 const app = express();
-// const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 3005;
 
 // Configuración de Swagger
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
@@ -33,11 +32,8 @@ app.get('/openapi.json', (req, res) => {
 app.use('/api', citiesRoutes);
 
 // Iniciamos el servidor
-// app.listen(PORT, () => {
-//     console.log(`Server running on port ${PORT}`);
-//     console.log(`Swagger docs available at http://localhost:${PORT}/docs`);
-//     console.log(`OpenAPI JSON available at http://localhost:${PORT}/openapi.json`);
-//   });
-
-// Exportar el manejador para funciones serverless
-module.exports.handler = serverless(app);
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+    console.log(`Swagger docs available at http://localhost:${PORT}/docs`);
+    console.log(`OpenAPI JSON available at http://localhost:${PORT}/openapi.json`);
+  });
