@@ -5,3 +5,13 @@
   from = "/api/*"               # Cambia esto según cómo quieras acceder a tu API
   to = "/.netlify/functions/app"  # Cambia "app" al nombre del archivo de función que crees
   status = 200
+
+[[redirects]]
+  from = "/docs"
+  to = "/.netlify/functions/app/docs"
+  status = 200
+
+[[redirects]]
+  from = "/openapi.json"
+  to = "/.netlify/functions/app/openapi.json"
+  status = 200

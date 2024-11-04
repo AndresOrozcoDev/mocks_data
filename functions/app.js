@@ -6,7 +6,7 @@ const citiesRoutes = require('../routes/cities');
 const serverless = require('serverless-http');
 
 const app = express();
-const PORT = process.env.PORT || 3005;
+// const PORT = process.env.PORT || 3005;
 
 // Configuración de Swagger
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
