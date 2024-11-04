@@ -1,6 +1,5 @@
 [build]
   functions = "functions"  # Asegúrate de que este directorio existe y contiene tus funciones
-  publish = "public"       # Cambia esto si tienes archivos estáticos a publicar
 
 [[redirects]]
   from = "/api/*"               # Cambia esto según cómo quieras acceder a tu API
